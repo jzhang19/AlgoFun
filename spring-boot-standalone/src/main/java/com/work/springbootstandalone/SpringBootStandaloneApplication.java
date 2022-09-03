@@ -18,9 +18,11 @@ public class SpringBootStandaloneApplication implements CommandLineRunner {
 	}
 
 	public void run(String... args) throws Exception {
-		parserService.parsingFile("E:\\workspace\\AlgoFun\\spring-boot-standalone\\input.txt");
-		parserService.displayHouseholds("E:\\workspace\\AlgoFun\\spring-boot-standalone\\output.txt");
-		
+		try {
+			parserService.parsingFile("E:\\workspace\\AlgoFun\\spring-boot-standalone\\input.txt");
+			parserService.displayHouseholds("E:\\workspace\\AlgoFun\\spring-boot-standalone\\output.txt");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
-
 }

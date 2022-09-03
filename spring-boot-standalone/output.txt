@@ -1,8 +1,20 @@
-Location: wa-seattle-123 main st., Number of occupants: 1
-Location: WA-Tacoma-234 2nd Ave., Number of occupants: 2
-Location: Wa-Seattle-123 main st , Number of occupants: 1
-Location: WA-Seattle-345 3rd Blvd., Apt. 200, Number of occupants: 1
-Location: WA-Seattle-234 2nd Ave, Number of occupants: 1
-Location: WA-Seattle-123 Main St., Number of occupants: 2
-Location: WA-Seattle-345 3rd Blvd. Apt. 200, Number of occupants: 1
-Location: FL-Tacoma-234 2nd Ave., Number of occupants: 1
+Household: 234 2nd Ave, Tacoma, WA, Occupants Number: 2
+Bob, Williams, 234 2nd Ave, Tacoma, WA, 26
+Eve, Smith, 234 2nd Ave, Tacoma, WA, 25
+
+Household: 345 3rd Blvd Apt 200, Seattle, WA, Occupants Number: 2
+George, Brown, 345 3rd Blvd Apt 200, Seattle, WA, 18
+Helen, Brown, 345 3rd Blvd Apt 200, Seattle, WA, 18
+
+Household: 123 Main St, Seattle, WA, Occupants Number: 4
+Dave, Smith, 123 Main St, Seattle, WA, 43
+Alice, Smith, 123 Main St, Seattle, WA, 45
+Ian, Smith, 123 Main St, Seattle, WA, 18
+Jane, Smith, 123 Main St, Seattle, WA, 13
+
+Household: 234 2nd Ave, Seattle, WA, Occupants Number: 1
+Carol, Johnson, 234 2nd Ave, Seattle, WA, 67
+
+Household: 234 2nd Ave, Tacoma, FL, Occupants Number: 1
+Frank, Jones, 234 2nd Ave, Tacoma, FL, 23
+

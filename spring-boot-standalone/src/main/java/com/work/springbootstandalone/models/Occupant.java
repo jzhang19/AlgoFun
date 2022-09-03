@@ -5,13 +5,11 @@ public class Occupant {
     private String firstName;
     private String lastName;
     private Integer age;
-    private Address address;
     
-    public Occupant(String firstName, String lastName, Integer age, Address address) {
+    public Occupant(String firstName, String lastName, Integer age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.address = address;
     }
 
     public String getFirstName() {
@@ -31,12 +29,6 @@ public class Occupant {
     }
     public void setAge(Integer age) {
         this.age = age;
-    }
-    public Address getAddress() {
-        return address;
-    }
-    public void setAddress(Address address) {
-        this.address = address;
     }
 
 }

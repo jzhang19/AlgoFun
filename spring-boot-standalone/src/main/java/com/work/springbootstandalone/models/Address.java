@@ -15,7 +15,6 @@ public class Address {
         this.zone = zone;
         this.country = country;
     }
-
     public String getAddress() {
         return address;
     }
@@ -46,5 +45,6 @@ public class Address {
     public void setCountry(String country) {
         this.country = country;
     }
+    
     
 }
