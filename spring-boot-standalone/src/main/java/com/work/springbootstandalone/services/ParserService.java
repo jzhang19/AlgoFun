@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,7 @@ import com.work.springbootstandalone.models.Address;
 import com.work.springbootstandalone.models.Household;
 import com.work.springbootstandalone.models.Occupant;
 import com.work.springbootstandalone.utils.customStringUtil;
+import com.work.springbootstandalone.utils.customStringUtil.occupantsComparator;
 
 @Service
 public class ParserService {
@@ -72,6 +74,8 @@ public class ParserService {
 
                 // Occupants
                 if (household.getOccupants().size() > 0) {
+                    Collections.sort(household.getOccupants(), new occupantsComparator());
+
                     for (Occupant occupant : household.getOccupants()) {
                         content = new StringBuilder()
                         .append(occupant.getFirstName()).append(", ")
