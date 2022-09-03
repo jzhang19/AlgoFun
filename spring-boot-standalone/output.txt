@@ -1,0 +1,8 @@
+Location: wa-seattle-123 main st., Number of occupants: 1
+Location: WA-Tacoma-234 2nd Ave., Number of occupants: 2
+Location: Wa-Seattle-123 main st , Number of occupants: 1
+Location: WA-Seattle-345 3rd Blvd., Apt. 200, Number of occupants: 1
+Location: WA-Seattle-234 2nd Ave, Number of occupants: 1
+Location: WA-Seattle-123 Main St., Number of occupants: 2
+Location: WA-Seattle-345 3rd Blvd. Apt. 200, Number of occupants: 1
+Location: FL-Tacoma-234 2nd Ave., Number of occupants: 1

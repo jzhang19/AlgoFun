@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "Standalone Java App",
+        "spring-boot-standalone/src/main/java/com/work/springbootstandalone"
+    ]
+}
