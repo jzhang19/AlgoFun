@@ -16,7 +16,8 @@ public final class customStringUtil {
     public static String[] parseLine(String input) {
         String[] lineArr = input.split("\",\"");
         for (int i = 0; i < lineArr.length; i++) {
-            lineArr[i] = lineArr[i].replaceAll("\"|,|\s+$|\\.", "");
+            lineArr[i] = lineArr[i].replaceAll("\"|,|\\.", "");
+            lineArr[i] = lineArr[i].replaceAll("^\\s+|\s+$|\s+(?=\s)", "");
         }
         return lineArr;
     }
