@@ -1,0 +1,5 @@
+"Dave","Smith","123 main st.","seattle","wa","43"
+"Alice","Smith","123 Main St.","Seattle","WA","45"
+"George","Brown","345 3rd Blvd., Apt. 200","Seattle","WA","18"
+"Helen","Brown","345 3rd Blvd. Apt. 200","Seattle","WA","18"
+"Jane","Smith","123 Main St.","Seattle","WA","13"

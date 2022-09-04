@@ -1,5 +1,8 @@
 package com.work.springbootstandalone;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,8 +22,10 @@ public class SpringBootStandaloneApplication implements CommandLineRunner {
 
 	public void run(String... args) throws Exception {
 		try {
-			parserService.parsingFile("E:\\workspace\\AlgoFun\\spring-boot-standalone\\input.txt");
-			parserService.displayHouseholds("E:\\workspace\\AlgoFun\\spring-boot-standalone\\output.txt");
+			// Current working directory
+			Path workingDir = Paths.get("spring-boot-standalone/testFiles").toAbsolutePath();
+			parserService.parsingFile(workingDir.toString() + "/input.txt");
+			parserService.displayHouseholds(workingDir.toString() + "/output.txt");
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
