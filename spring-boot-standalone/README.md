@@ -37,11 +37,10 @@
 	|   |____|__ config
 	|   |____|__ models
 	|   |____|__ services (Parser Implementations)
-    |   |____|__ utils (Custom utility functions)
-    |	|____|__ TestApplication.java (Spring Boot main function)
-	|	|__resources
-	|	|
-	|	|__tests
+    	|   |____|__ utils (Custom utility functions)
+    	|   |____|__ TestApplication.java (Spring Boot main function)
+	|   |__ resources
+	|   |__tests
 ```
 
 ## Testing
