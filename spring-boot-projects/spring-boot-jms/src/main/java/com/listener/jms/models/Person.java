@@ -2,18 +2,24 @@ package com.listener.jms.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
+@Table(name="person")
 public class Person {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
     private Integer age;
     
-    public Person(Long id, String firstName, String lastName, Integer age) {
+    public Person(Long id, @NotBlank String firstName, @NotBlank String lastName, Integer age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
