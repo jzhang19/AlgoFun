@@ -23,7 +23,7 @@ public class SpringBootStandaloneApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		try {
 			// Current working directory
-			Path workingDir = Paths.get("spring-boot-standalone/testFiles").toAbsolutePath();
+			Path workingDir = Paths.get("spring-boot-projects/spring-boot-standalone/testFiles").toAbsolutePath();
 			parserService.parsingFile(workingDir.toString() + "/input.txt");
 			parserService.displayHouseholds(workingDir.toString() + "/output.txt");
 		} catch (Exception ex) {
