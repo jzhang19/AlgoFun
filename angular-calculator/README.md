@@ -1,8 +1,8 @@
-# Celonis Programming Challenge
+# Programming Challenge
 
 Dear applicant,
 
-Congratulations, you made it to the Celonis Programming Challenge!
+Congratulations, you made it to the Programming Challenge!
 
 Why do we ask you to complete this challenge?
 
@@ -70,7 +70,7 @@ PI * SQR($r)
 
 ## Visualizing the formula
 
-Data visualization is one of the key aspects of Celonis' software. In this task you should implement an interactive visualization of the formula entered.
+Data visualization is one of the key aspects of software. In this task you should implement an interactive visualization of the formula entered.
 
 As a starting point, in the src/ folder you can find a parser as well as AST classes and a small function library implemented for demonstration purposes. The output of the parser is a JSON syntax tree which is used below for the tasks.
 
@@ -93,7 +93,7 @@ As another example, someone has entered the following formula for calculating th
 
 ![Alt text](./assets/Challenge_EditBlock.png?raw=true "Click to select and x button to remove")
 
-This example is actually from Celonis’s formula editor UI, so it’s very polished compared to what we are asking for here, but it’s also representative of the work we do.
+This example is actually from formula editor UI, so it’s very polished compared to what we are asking for here, but it’s also representative of the work we do.
 
 # Hints on running the scaffolded code
 
