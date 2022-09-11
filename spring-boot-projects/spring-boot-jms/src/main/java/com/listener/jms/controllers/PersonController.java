@@ -20,9 +20,9 @@ public class PersonController {
     
     
     @GetMapping("/persons")
-    public ResponseEntity<?> people() {
-        List<Person> people = personRepository.findAll();
-        return ResponseEntity.ok().body(people);
+    public ResponseEntity<?> persons() {
+        List<Person> persons = personRepository.findAll();
+        return ResponseEntity.ok().body(persons);
     }
 
 }
