@@ -1,6 +1,6 @@
 package com.listener.jms.models;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name="orders")
-public class Order {
+public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,6 +25,8 @@ public class Order {
     private String item;
     @NotNull
     private Integer cost;
+
+    public Order() {}
 
     public Order(Long id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank String item,
             @NotNull Integer cost) {
