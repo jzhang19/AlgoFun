@@ -8,21 +8,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.listener.jms.models.Person;
-import com.listener.jms.repository.PersonRepository;
+import com.listener.jms.models.Order;
+import com.listener.jms.repository.OrderRepository;
 
 @RestController
-@RequestMapping("/api/person")
+@RequestMapping("/api/order")
 public class PersonController {
 
     @Autowired
-    private PersonRepository personRepository;  
+    private OrderRepository personRepository;  
     
     
-    @GetMapping("/persons")
+    @GetMapping("/orders")
     public ResponseEntity<?> persons() {
-        List<Person> persons = personRepository.findAll();
-        return ResponseEntity.ok().body(persons);
+        List<Order> orders = personRepository.findAll();
+        return ResponseEntity.ok().body(orders);
     }
 
 }
