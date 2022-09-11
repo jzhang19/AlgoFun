@@ -13,7 +13,7 @@ import com.listener.jms.repository.OrderRepository;
 
 @RestController
 @RequestMapping("/api/order")
-public class PersonController {
+public class OrderController {
 
     @Autowired
     private OrderRepository personRepository;  
