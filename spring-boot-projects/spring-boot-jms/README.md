@@ -9,6 +9,7 @@
 Create a spring starter project and write a jms listener to read messages either from ActiveMQ or Sqs. The code should be able to consume and log messages.
 
 *Stretch - Create a dummy entity class to represent a table using H2 db (in memory) and query data using jpa repository. Table schema and data can be any samples (as the person sees fit).
+
 *Stretch – Create a personal AWS account to setup the queue and run the code to consumer the messages”
 - I setup an embedded Artemis ActiveMQ in this spring boot application. The JMS listener will consume the message and logs it in the terminal
 
