@@ -1,2 +1,8 @@
 *.pyc
 description.txt
+
+
+# angular-calculator
+/angular-calculator/node_modules
+/angular-calculator/package-lock.json
+
