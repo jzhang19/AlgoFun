@@ -12,5 +12,5 @@
   <p><button (click)="convertAstToFormula()">Convert AST to Formula</button></p>
   <h3>Visualizer-to-Formula</h3>
   <p>{{syntaxTreeFormula | json}}</p>
-  <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula"></app-tree-visualizer>
+  <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula" (syntaxTreeFormulaChange)="handleDeleteNode('all')"></app-tree-visualizer>
 </div>

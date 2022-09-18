@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, SimpleChanges } from '@angular/core';
 
 // @ts-ignore
 import * as Parser from './parser/formula-parser.js';
@@ -28,7 +28,10 @@ export class AppComponent implements OnInit {
   }
 
   convertAstToFormula() {
-    this.syntaxTreeFormula = Object.assign({}, this.syntaxTree);
+    this.syntaxTreeFormula = JSON.parse(JSON.stringify(this.syntaxTree));
   }
 
+  handleDeleteNode(pos: string) {
+    this.syntaxTreeFormula = null;
+  }
 }
