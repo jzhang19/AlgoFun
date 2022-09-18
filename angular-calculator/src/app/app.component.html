@@ -11,6 +11,6 @@
   <pre style="max-height: 300px; overflow-y: auto;background-color: #eeeeee;">{{syntaxTreeJson}}</pre>
   <p><button (click)="convertAstToFormula()">Convert AST to Formula</button></p>
   <h3>Visualizer-to-Formula</h3>
-  <p>{{ visualizerOutput }}</p>
-  <app-tree-visualizer [syntaxTree]="syntaxTree"></app-tree-visualizer>
+  <p>{{syntaxTreeFormula | json}}</p>
+  <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula"></app-tree-visualizer>
 </div>

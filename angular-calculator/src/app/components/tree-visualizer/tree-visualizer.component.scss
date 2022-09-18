@@ -5,6 +5,18 @@
     BORDER-LEFT: blue 1px solid;
     BORDER-BOTTOM: blue 1px solid;
     BACKGROUND-COLOR: White;
+    position: relative;
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
+}
+
+.close
+{
+    top: 0px;
+    right: 0px;
+    color: red;
+    background-color: white;
+    font-size: 10px;
+    position: absolute;
+    display: inline-block;
 }

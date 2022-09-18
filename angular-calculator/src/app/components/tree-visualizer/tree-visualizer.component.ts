@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tree-visualizer',
@@ -6,12 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./tree-visualizer.component.scss']
 })
 export class TreeVisualizerComponent implements OnInit {
-  @Input() syntaxTree: any;
-  
+  @Input() syntaxTreeFormula: any;
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Child: ", this.syntaxTree);
   }
 
+  deleteNode() {
+    this.syntaxTreeFormula = null;
+  }
 }

@@ -1,36 +1,37 @@
-<span *ngIf="syntaxTree">
-    <span [ngSwitch]="syntaxTree.type">
-        <span class="box" *ngSwitchCase="'MULTIPLICATION'">
-            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+<span class="box" *ngIf="syntaxTreeFormula">
+    <span [ngSwitch]="syntaxTreeFormula.type">
+        <span *ngSwitchCase="'MULTIPLICATION'">
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.left"></app-tree-visualizer>
             *
-            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.right"></app-tree-visualizer>
         </span>
-        <span class="box" *ngSwitchCase="'DIVISION'">
-            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+        <span *ngSwitchCase="'DIVISION'">
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.left"></app-tree-visualizer>
             /
-            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.right"></app-tree-visualizer>
         </span>
-        <span class="box" *ngSwitchCase="'ADDITION'">
-            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+        <span *ngSwitchCase="'ADDITION'">
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.left"></app-tree-visualizer>
             +
-            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.right"></app-tree-visualizer>
         </span>
-        <span class="box" *ngSwitchCase="'SUBTRACTION'">
-            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+        <span *ngSwitchCase="'SUBTRACTION'">
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.left"></app-tree-visualizer>
             -
-            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+            <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.right"></app-tree-visualizer>
         </span>
-        <span class="box" *ngSwitchCase="'PAREN'">
-            (<app-tree-visualizer [syntaxTree]="syntaxTree.expression"></app-tree-visualizer>)
+        <span *ngSwitchCase="'PAREN'">
+            (<app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.expression"></app-tree-visualizer>)
         </span>
-        <span class="box" *ngSwitchCase="'FUNCTION'">
-            {{syntaxTree.name}} 
-            (<span *ngFor="let argument of syntaxTree.arguments">
-                <app-tree-visualizer [syntaxTree]="argument"></app-tree-visualizer>
+        <span *ngSwitchCase="'FUNCTION'">
+            {{syntaxTreeFormula.name}} 
+            (<span *ngFor="let argument of syntaxTreeFormula.arguments">
+                <app-tree-visualizer [syntaxTreeFormula]="argument"></app-tree-visualizer>
             </span>)
         </span>
-        <span class="box" *ngSwitchCase="'PI'">{{syntaxTree.value}}</span>
-        <span class="box" *ngSwitchCase="'VARIABLE'">{{syntaxTree.name}}</span>
-        <span class="box" *ngSwitchCase="'NUMBER'">{{syntaxTree.value}}</span>
+        <span *ngSwitchCase="'PI'">{{syntaxTreeFormula.value}}</span>
+        <span *ngSwitchCase="'VARIABLE'">{{syntaxTreeFormula.name}}</span>
+        <span *ngSwitchCase="'NUMBER'">{{syntaxTreeFormula.value}}</span>
     </span>
+    <span (click)="deleteNode()" class="close">X</span>
 </span>
