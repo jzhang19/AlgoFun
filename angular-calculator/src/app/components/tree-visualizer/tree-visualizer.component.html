@@ -1,1 +1,36 @@
-<p>tree-visualizer works!</p>
+<span *ngIf="syntaxTree">
+    <span [ngSwitch]="syntaxTree.type">
+        <span class="box" *ngSwitchCase="'MULTIPLICATION'">
+            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+            *
+            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+        </span>
+        <span class="box" *ngSwitchCase="'DIVISION'">
+            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+            /
+            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+        </span>
+        <span class="box" *ngSwitchCase="'ADDITION'">
+            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+            +
+            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+        </span>
+        <span class="box" *ngSwitchCase="'SUBTRACTION'">
+            <app-tree-visualizer [syntaxTree]="syntaxTree.left"></app-tree-visualizer>
+            -
+            <app-tree-visualizer [syntaxTree]="syntaxTree.right"></app-tree-visualizer>
+        </span>
+        <span class="box" *ngSwitchCase="'PAREN'">
+            (<app-tree-visualizer [syntaxTree]="syntaxTree.expression"></app-tree-visualizer>)
+        </span>
+        <span class="box" *ngSwitchCase="'FUNCTION'">
+            {{syntaxTree.name}} 
+            (<span *ngFor="let argument of syntaxTree.arguments">
+                <app-tree-visualizer [syntaxTree]="argument"></app-tree-visualizer>
+            </span>)
+        </span>
+        <span class="box" *ngSwitchCase="'PI'">{{syntaxTree.value}}</span>
+        <span class="box" *ngSwitchCase="'VARIABLE'">{{syntaxTree.name}}</span>
+        <span class="box" *ngSwitchCase="'NUMBER'">{{syntaxTree.value}}</span>
+    </span>
+</span>
