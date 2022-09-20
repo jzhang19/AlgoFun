@@ -20,6 +20,9 @@
             -
             <app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.right" (syntaxTreeFormulaChange)="handleDeleteNode('right')"></app-tree-visualizer>
         </span>
+        <span *ngSwitchCase="'NEGATION'">
+            -<app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.expression" (syntaxTreeFormulaChange)="handleDeleteNode('all')"></app-tree-visualizer>
+        </span>
         <span *ngSwitchCase="'PAREN'">
             (<app-tree-visualizer [syntaxTreeFormula]="syntaxTreeFormula.expression" (syntaxTreeFormulaChange)="handleDeleteNode('all')"></app-tree-visualizer>)
         </span>
